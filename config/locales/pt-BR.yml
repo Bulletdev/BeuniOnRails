@@ -1,6 +1,21 @@
 pt-BR:
   hello: "Olá mundo"
 
+  devise:
+    sessions:
+      user:
+        signed_in: "Login efetuado com sucesso."
+        signed_out: "Logout efetuado com sucesso."
+      signed_in: "Login efetuado com sucesso."
+      signed_out: "Logout efetuado com sucesso."
+    registrations:
+      user:
+        signed_up: "Cadastro realizado com sucesso."
+      signed_up: "Cadastro realizado com sucesso."
+    passwords:
+      send_instructions: "Instruções para redefinir senha enviadas por e-mail."
+      updated: "Sua senha foi redefinida com sucesso."
+
   activerecord:
     models:
       user: "Usuário"

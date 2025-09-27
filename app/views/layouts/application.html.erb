@@ -10,15 +10,15 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="bg-gray-50">
+  <body class="bg-gray-50" style="background-color: #F9FAFB;">
     <% if user_signed_in? && !devise_controller? %>
-      <nav class="bg-white shadow-sm border-b border-gray-200">
+      <nav class="bg-white shadow-beuni border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex justify-between h-16">
             <div class="flex">
               <div class="flex-shrink-0 flex items-center">
-                <%= link_to root_path, class: "text-xl font-bold text-indigo-600" do %>
-                  Beuni Gifts
+                <%= link_to root_path, class: "text-xl font-bold" do %>
+                  <span style="color: #6B46C1;">Beuni</span> <span style="color: #EC4899;">Gifts</span>
                 <% end %>
               </div>
               <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
@@ -38,7 +38,8 @@
                   <span class="text-sm text-gray-700">Olá, <%= current_user.name %></span>
                   <span class="text-xs text-gray-500">(<%= current_organization.name %>)</span>
                   <%= link_to "Sair", destroy_user_session_path, method: :delete,
-                              class: "text-sm text-gray-500 hover:text-gray-700" %>
+                              class: "text-sm px-4 py-2 rounded-full transition-all duration-200 hover:transform hover:-translate-y-0.5",
+                              style: "background-color: #6B46C1; color: white;" %>
                 </div>
               </div>
             </div>

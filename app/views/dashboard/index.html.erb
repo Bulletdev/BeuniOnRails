@@ -3,20 +3,20 @@
       <h2 class="text-2xl font-bold text-gray-900 mb-6">Dashboard - <%= current_organization.name %></h2>
 
       <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-        <div class="bg-white overflow-hidden shadow rounded-lg">
-          <div class="p-5">
+        <div class="bg-white overflow-hidden shadow-beuni rounded-beuni border border-gray-100 hover:transform hover:-translate-y-1 transition-all duration-200">
+          <div class="p-6">
             <div class="flex items-center">
               <div class="flex-shrink-0">
-                <div class="w-8 h-8 bg-indigo-500 rounded-md flex items-center justify-center">
-                  <span class="text-white text-sm font-medium">👥</span>
+                <div class="w-12 h-12 rounded-full flex items-center justify-center" style="background-color: #6B46C1;">
+                  <span class="text-white text-lg">👥</span>
                 </div>
               </div>
               <div class="ml-5 w-0 flex-1">
                 <dl>
-                  <dt class="text-sm font-medium text-gray-500 truncate">
+                  <dt class="text-sm font-medium text-gray-600 truncate">
                     Total de Funcionários
                   </dt>
-                  <dd class="text-lg font-medium text-gray-900">
+                  <dd class="text-2xl font-bold" style="color: #6B46C1;">
                     <%= @employees_count %>
                   </dd>
                 </dl>
@@ -25,20 +25,20 @@
           </div>
         </div>
 
-        <div class="bg-white overflow-hidden shadow rounded-lg">
-          <div class="p-5">
+        <div class="bg-white overflow-hidden shadow-beuni rounded-beuni border border-gray-100 hover:transform hover:-translate-y-1 transition-all duration-200">
+          <div class="p-6">
             <div class="flex items-center">
               <div class="flex-shrink-0">
-                <div class="w-8 h-8 bg-green-500 rounded-md flex items-center justify-center">
-                  <span class="text-white text-sm font-medium">🎂</span>
+                <div class="w-12 h-12 rounded-full flex items-center justify-center" style="background-color: #10B981;">
+                  <span class="text-white text-lg">🎂</span>
                 </div>
               </div>
               <div class="ml-5 w-0 flex-1">
                 <dl>
-                  <dt class="text-sm font-medium text-gray-500 truncate">
+                  <dt class="text-sm font-medium text-gray-600 truncate">
                     Aniversários Este Mês
                   </dt>
-                  <dd class="text-lg font-medium text-gray-900">
+                  <dd class="text-2xl font-bold" style="color: #10B981;">
                     <%= @birthday_this_month %>
                   </dd>
                 </dl>
@@ -47,20 +47,20 @@
           </div>
         </div>
 
-        <div class="bg-white overflow-hidden shadow rounded-lg">
-          <div class="p-5">
+        <div class="bg-white overflow-hidden shadow-beuni rounded-beuni border border-gray-100 hover:transform hover:-translate-y-1 transition-all duration-200">
+          <div class="p-6">
             <div class="flex items-center">
               <div class="flex-shrink-0">
-                <div class="w-8 h-8 bg-yellow-500 rounded-md flex items-center justify-center">
-                  <span class="text-white text-sm font-medium">📦</span>
+                <div class="w-12 h-12 rounded-full flex items-center justify-center" style="background-color: #FB923C;">
+                  <span class="text-white text-lg">📦</span>
                 </div>
               </div>
               <div class="ml-5 w-0 flex-1">
                 <dl>
-                  <dt class="text-sm font-medium text-gray-500 truncate">
+                  <dt class="text-sm font-medium text-gray-600 truncate">
                     Envios Pendentes
                   </dt>
-                  <dd class="text-lg font-medium text-gray-900">
+                  <dd class="text-2xl font-bold" style="color: #FB923C;">
                     <%= @pending_shipments %>
                   </dd>
                 </dl>
@@ -69,20 +69,20 @@
           </div>
         </div>
 
-        <div class="bg-white overflow-hidden shadow rounded-lg">
-          <div class="p-5">
+        <div class="bg-white overflow-hidden shadow-beuni rounded-beuni border border-gray-100 hover:transform hover:-translate-y-1 transition-all duration-200">
+          <div class="p-6">
             <div class="flex items-center">
               <div class="flex-shrink-0">
-                <div class="w-8 h-8 bg-purple-500 rounded-md flex items-center justify-center">
-                  <span class="text-white text-sm font-medium">🎁</span>
+                <div class="w-12 h-12 rounded-full flex items-center justify-center" style="background-color: #EC4899;">
+                  <span class="text-white text-lg">🎁</span>
                 </div>
               </div>
               <div class="ml-5 w-0 flex-1">
                 <dl>
-                  <dt class="text-sm font-medium text-gray-500 truncate">
+                  <dt class="text-sm font-medium text-gray-600 truncate">
                     Campanhas Ativas
                   </dt>
-                  <dd class="text-lg font-medium text-gray-900">
+                  <dd class="text-2xl font-bold" style="color: #EC4899;">
                     <%= current_organization.gift_campaigns.active.count %>
                   </dd>
                 </dl>
