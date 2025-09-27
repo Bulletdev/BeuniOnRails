@@ -1,0 +1,26 @@
+pt-BR:
+  hello: "Olá mundo"
+
+  activerecord:
+    models:
+      user: "Usuário"
+      organization: "Organização"
+      employee: "Funcionário"
+    attributes:
+      user:
+        name: "Nome"
+        email: "E-mail"
+        password: "Senha"
+        password_confirmation: "Confirmação da senha"
+      organization:
+        name: "Nome da Empresa"
+        cnpj: "CNPJ"
+      employee:
+        name: "Nome completo"
+        birth_date: "Data de nascimento"
+        cpf: "CPF"
+        email: "E-mail"
+        phone: "Telefone"
+        position: "Cargo"
+        department: "Departamento"
+        admission_date: "Data de admissão"
