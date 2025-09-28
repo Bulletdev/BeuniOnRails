@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.3.1"
+ruby "3.4.6"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3.2"
@@ -54,35 +54,8 @@ gem "image_processing", "~> 1.2"
 # Authentication
 gem 'devise'
 
-# Authorization
-gem 'pundit'
-
 # Background jobs
 gem 'sidekiq'
-
-# HTTP requests
-gem 'httparty'
-
-# Pagination
-gem 'kaminari'
-
-# Search and filters
-gem 'ransack'
-
-# Audit trail
-gem 'paper_trail'
-
-# Brazilian holidays
-gem 'holidays'
-
-# CPF/CNPJ validation
-gem 'cpf_cnpj'
-
-# Phone validation
-gem 'phonelib'
-
-# Fake data for seeds
-gem 'faker'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
