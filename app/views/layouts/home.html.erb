@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <title>Beuni Gifts - Eliminamos a Complexidade de Comprar e Enviar Brindes Personalizados</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Com a BeUni, você garante total visibilidade e controle dos seus brindes personalizados, tudo na nossa plataforma.">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Gantari:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Gantari:wght@300;400;500;600&display=swap');
+
+      :root {
+        --beuni-cream: #F8F1E0;
+        --beuni-orange: #FFB990;
+        --beuni-green: #93C90F;
+        --beuni-brown: #331B10;
+        --beuni-orange-border: #FF5600;
+        --beuni-text: #2D2926;
+        --beuni-white: #FFFFFF;
+      }
+
+      html { scroll-behavior: smooth; }
+      body {
+        font-family: 'Gantari', sans-serif;
+        background: var(--beuni-cream);
+        color: var(--beuni-text);
+        overflow-x: hidden;
+      }
+
+      /* Prevent SVG overflow */
+      svg {
+        max-width: 100%;
+        height: auto;
+      }
+      .font-lexend { font-family: 'Lexend', sans-serif; }
+
+      /* Componentes customizados que o Tailwind não tem */
+      .beuni-gradient-text {
+        background: linear-gradient(135deg, var(--beuni-orange-border), var(--beuni-green));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .beuni-btn-primary {
+        background: linear-gradient(135deg, var(--beuni-orange-border), #E04800);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .beuni-btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 20px 40px rgba(255, 86, 0, 0.3);
+        background: linear-gradient(135deg, #E04800, var(--beuni-orange-border));
+      }
+
+      .beuni-card-float {
+        animation: cardFloat 6s ease-in-out infinite;
+      }
+
+      @keyframes cardFloat {
+        0%, 100% { transform: translateY(0px) rotate(3deg); }
+        50% { transform: translateY(-10px) rotate(3deg); }
+      }
+
+      .beuni-text-animate {
+        opacity: 0;
+        animation: textReveal 0.8s ease forwards;
+      }
+
+      @keyframes textReveal {
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      /* Service cards com Tailwind + custom */
+      .beuni-service-card-orange {
+        background: linear-gradient(135deg, var(--beuni-orange), #FF8A50);
+      }
+      .beuni-service-card-green {
+        background: linear-gradient(135deg, var(--beuni-green), #7BA428);
+      }
+      .beuni-service-card-brown {
+        background: linear-gradient(135deg, var(--beuni-brown), #4A2818);
+      }
+    </style>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

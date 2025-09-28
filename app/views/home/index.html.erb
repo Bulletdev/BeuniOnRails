@@ -1,0 +1,402 @@
+<!-- Banner promocional -->
+<a href="https://belogistics.beuni.com.br" target="_blank"
+   class="block bg-gradient-to-r from-orange-400 to-orange-500 text-white text-center py-3 px-6 font-lexend font-semibold text-sm hover:from-orange-500 hover:to-orange-600 transition-all duration-300">
+  🎁 Experimente nossa ferramenta de cotação de envios! 🎁
+</a>
+
+<!-- Navegação -->
+<nav class="bg-white/95 backdrop-blur-md border-b border-orange-100 sticky top-0 z-50 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
+      <div class="flex items-center">
+        <%= image_tag "beuni_logo.png", alt: "Beuni", class: "h-8 w-auto max-w-[120px] hover:scale-105 transition-transform duration-300" %>
+      </div>
+
+      <div class="hidden lg:flex items-center space-x-8">
+        <a href="#inicio" class="font-lexend text-gray-700 hover:text-orange-600 transition-colors duration-300">Início</a>
+        <div class="relative group">
+          <button class="font-lexend text-gray-700 hover:text-orange-600 transition-colors duration-300 flex items-center">
+            Serviços
+            <svg class="ml-1 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute top-full left-0 w-56 bg-white rounded-lg shadow-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2">
+            <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600 transition-colors">
+              <div class="font-medium">Nosso Catálogo</div>
+              <div class="text-xs text-gray-500">Brindes personalizados</div>
+            </a>
+            <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors">
+              <div class="font-medium">BeEco</div>
+              <div class="text-xs text-gray-500">Linha sustentável</div>
+            </a>
+            <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-amber-50 hover:text-amber-700 transition-colors">
+              <div class="font-medium">BeTracking</div>
+              <div class="text-xs text-gray-500">Sistema de rastreamento</div>
+            </a>
+          </div>
+        </div>
+        <a href="#plataforma" class="font-lexend text-gray-700 hover:text-orange-600 transition-colors duration-300">Plataforma</a>
+        <a href="#contato" class="font-lexend text-gray-700 hover:text-orange-600 transition-colors duration-300">Contato</a>
+        <%= link_to "Entrar", new_user_session_path,
+            class: "beuni-btn-primary text-white font-lexend font-semibold px-6 py-3 rounded-full text-sm" %>
+      </div>
+
+      <!-- Mobile menu button -->
+      <div class="lg:hidden">
+        <%= link_to "Entrar", new_user_session_path,
+            class: "beuni-btn-primary text-white font-lexend font-semibold px-4 py-2 rounded-full text-sm" %>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="inicio" class="relative overflow-hidden">
+  <!-- Background Elements -->
+  <div class="absolute inset-0">
+    <div class="absolute top-10 left-10 w-64 h-64 bg-gradient-to-br from-orange-200/30 to-orange-300/30 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-10 right-10 w-80 h-80 bg-gradient-to-br from-green-200/30 to-green-300/30 rounded-full blur-3xl"></div>
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-br from-amber-200/20 to-amber-300/20 rounded-full blur-3xl"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+      <!-- Content -->
+      <div class="text-left space-y-8">
+        <div class="space-y-6">
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold font-lexend leading-tight">
+            <span class="block beuni-text-animate" style="animation-delay: 0.1s;">Eliminamos a</span>
+            <span class="block beuni-gradient-text beuni-text-animate" style="animation-delay: 0.2s;">Complexidade</span>
+            <span class="block beuni-text-animate" style="animation-delay: 0.3s;">de Comprar e Enviar</span>
+            <span class="block beuni-gradient-text beuni-text-animate" style="animation-delay: 0.4s;">Brindes Personalizados</span>
+          </h1>
+
+          <p class="text-lg lg:text-xl text-gray-600 leading-relaxed max-w-2xl beuni-text-animate" style="animation-delay: 0.5s;">
+            Com a <span class="font-bold text-orange-600">BeUni</span>, você garante total
+            <span class="font-bold">visibilidade e controle</span> dos seus brindes personalizados,
+            tudo na nossa plataforma.
+          </p>
+        </div>
+
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 beuni-text-animate" style="animation-delay: 0.6s;">
+          <%= link_to "Acesse Nossa Plataforma", new_user_session_path,
+              class: "beuni-btn-primary text-white font-lexend font-semibold px-6 py-3 rounded-full text-base sm:text-lg inline-block text-center" %>
+
+          <a href="#servicos" class="group border-2 border-orange-500 text-orange-600 hover:bg-orange-500 hover:text-white font-lexend font-semibold px-6 py-3 rounded-full text-base transition-all duration-300 inline-block text-center">
+            Nossos Serviços
+          </a>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-3 gap-4 sm:gap-8 pt-8 border-t border-gray-200 beuni-text-animate" style="animation-delay: 0.7s;">
+          <div class="text-center">
+            <div class="text-2xl lg:text-3xl font-bold font-lexend text-orange-600 mb-2">1000+</div>
+            <div class="text-xs sm:text-sm text-gray-600">Empresas Atendidas</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl lg:text-3xl font-bold font-lexend text-green-600 mb-2">50k+</div>
+            <div class="text-xs sm:text-sm text-gray-600">Brindes Entregues</div>
+          </div>
+          <div class="text-center">
+            <div class="text-2xl lg:text-3xl font-bold font-lexend text-amber-700 mb-2">10+</div>
+            <div class="text-xs sm:text-sm text-gray-600">Anos de Experiência</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Visual Elements -->
+      <div class="relative lg:pl-8 overflow-hidden">
+        <div class="relative">
+          <!-- Main Dashboard Card -->
+          <div class="bg-white rounded-3xl shadow-2xl p-8 beuni-card-float">
+            <div class="flex items-center mb-6">
+              <div class="w-10 h-10 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full mr-4 flex items-center justify-center">
+                <span class="text-white font-bold text-sm">📊</span>
+              </div>
+              <div>
+                <div class="font-lexend font-semibold text-lg text-gray-800">Dashboard Beuni</div>
+                <div class="text-sm text-gray-500">Gestão Completa</div>
+              </div>
+            </div>
+
+            <div class="space-y-4">
+              <div class="flex justify-between items-center">
+                <span class="text-gray-700">Campanhas Ativas</span>
+                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">24</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-gray-700">Envios Pendentes</span>
+                <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">12</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-gray-700">Entregas Realizadas</span>
+                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">1,247</span>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-gray-100 text-center">
+              <div class="text-sm text-gray-500">💡 Controle total em uma única plataforma</div>
+            </div>
+          </div>
+
+          <!-- Floating Cards -->
+          <div class="absolute -bottom-4 -right-4 bg-white rounded-2xl shadow-xl p-4 w-56 transform hover:scale-105 transition-transform duration-300">
+            <div class="text-center">
+              <div class="text-lg mb-2">🎁</div>
+              <div class="font-lexend font-semibold text-lg text-gray-800 mb-2">Brindes Personalizados</div>
+              <div class="text-sm text-gray-500">Qualidade Premium</div>
+            </div>
+          </div>
+
+          <div class="absolute -top-6 -left-6 bg-gradient-to-br from-orange-400 to-orange-600 rounded-xl shadow-lg p-3 w-28 text-white text-center transform rotate-12 hover:rotate-6 transition-transform duration-300">
+            <div class="font-lexend font-bold text-lg">10+</div>
+            <div class="text-sm">Anos</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="servicos" class="py-16 lg:py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl lg:text-4xl font-bold font-lexend text-gray-900 mb-6">
+        Nossos <span class="beuni-gradient-text">Destaques</span>
+      </h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        Conheça as soluções que fazem da Beuni a escolha certa para seus brindes corporativos
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+      <!-- Card Catálogo -->
+      <div class="group beuni-service-card-orange text-gray-800 rounded-2xl p-8 relative overflow-hidden transform hover:scale-105 hover:-rotate-1 transition-all duration-500 cursor-pointer">
+        <div class="relative z-10 text-center">
+          <div class="text-2xl mb-2">🎁</div>
+          <h3 class="font-lexend text-2xl font-bold mb-3">Nosso Catálogo</h3>
+          <p class="text-lg font-medium mb-4 opacity-90">Beuni</p>
+          <p class="text-sm opacity-80 leading-relaxed mb-6">
+            Explore nossa ampla variedade de brindes personalizados com qualidade premium e designs exclusivos.
+          </p>
+          <button class="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-gray-800 px-6 py-2 rounded-full text-sm font-lexend font-semibold transition-all duration-300">
+            Ver Catálogo →
+          </button>
+        </div>
+        <div class="absolute -top-4 -right-4 w-24 h-24 border-4 border-white/30 rounded-full opacity-50"></div>
+      </div>
+
+      <!-- Card BeEco -->
+      <div class="group beuni-service-card-green text-white rounded-2xl p-8 relative overflow-hidden transform hover:scale-105 hover:rotate-1 transition-all duration-500 cursor-pointer">
+        <div class="relative z-10 text-center">
+          <div class="text-2xl mb-2">🌱</div>
+          <h3 class="font-lexend text-2xl font-bold mb-3">BeEco</h3>
+          <p class="text-lg font-medium mb-4 opacity-90">Linha Sustentável</p>
+          <p class="text-sm opacity-80 leading-relaxed mb-6">
+            Produtos ecológicos e sustentáveis que demonstram o compromisso da sua empresa com o meio ambiente.
+          </p>
+          <button class="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white px-6 py-2 rounded-full text-sm font-lexend font-semibold transition-all duration-300">
+            Saiba Mais →
+          </button>
+        </div>
+        <div class="absolute -bottom-4 -left-4 w-20 h-20 bg-white/20 rounded-full"></div>
+      </div>
+
+      <!-- Card BeTracking -->
+      <div class="group beuni-service-card-brown text-white rounded-2xl p-8 relative overflow-hidden transform hover:scale-105 hover:-rotate-1 transition-all duration-500 cursor-pointer">
+        <div class="relative z-10 text-center">
+          <div class="text-2xl mb-2">📦</div>
+          <h3 class="font-lexend text-2xl font-bold mb-3">BeTracking</h3>
+          <p class="text-lg font-medium mb-4 opacity-90">Rastreamento</p>
+          <p class="text-sm opacity-80 leading-relaxed mb-6">
+            Sistema completo de rastreamento que garante total visibilidade de todas as suas entregas.
+          </p>
+          <button class="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white px-6 py-2 rounded-full text-sm font-lexend font-semibold transition-all duration-300">
+            Rastrear →
+          </button>
+        </div>
+        <div class="absolute -top-4 -left-4 w-16 h-16 border-4 border-white/30 transform rotate-45"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Platform Section -->
+<section id="plataforma" class="py-16 lg:py-24 bg-gradient-to-br from-gray-50 to-gray-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl lg:text-4xl font-bold font-lexend text-gray-900 mb-6">
+        Nossa <span class="beuni-gradient-text">Plataforma</span>
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Tecnologia de ponta para simplificar sua gestão de brindes corporativos
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+      <div class="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+        <div class="w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-xl flex items-center justify-center mb-6">
+          <span class="text-white font-bold text-2xl">📊</span>
+        </div>
+        <h3 class="font-lexend text-2xl font-bold text-gray-900 mb-4">Gestão Completa</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Controle total sobre suas campanhas de brindes, desde a criação até a entrega final.
+          Acompanhe métricas em tempo real e otimize seus processos.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+        <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-700 rounded-xl flex items-center justify-center mb-6">
+          <span class="text-white font-bold text-2xl">💻</span>
+        </div>
+        <h3 class="font-lexend text-2xl font-bold text-gray-900 mb-4">Dashboard Intuitivo</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Interface moderna e intuitiva que permite gerenciar funcionários, campanhas e envios
+          de forma simples e eficiente.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Section -->
+<section class="py-16 lg:py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl lg:text-4xl font-bold font-lexend text-gray-900 mb-6">
+        Por que escolher a <span class="beuni-gradient-text">Beuni</span>?
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Somos especialistas em brindes personalizados com mais de 10 anos de experiência
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+      <div class="text-center group">
+        <div class="w-14 h-14 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+          <span class="text-lg">⚡</span>
+        </div>
+        <h3 class="font-lexend text-xl font-bold text-gray-900 mb-3">Rapidez</h3>
+        <p class="text-gray-600">Processo automatizado que reduz o tempo de gestão em até 80%</p>
+      </div>
+
+      <div class="text-center group">
+        <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-green-700 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+          <span class="text-lg">🎯</span>
+        </div>
+        <h3 class="font-lexend text-xl font-bold text-gray-900 mb-3">Precisão</h3>
+        <p class="text-gray-600">Sistema inteligente que garante entregas no momento certo</p>
+      </div>
+
+      <div class="text-center group">
+        <div class="w-14 h-14 bg-gradient-to-br from-amber-600 to-amber-800 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+          <span class="text-lg">📈</span>
+        </div>
+        <h3 class="font-lexend text-xl font-bold text-gray-900 mb-3">Resultados</h3>
+        <p class="text-gray-600">Relatórios detalhados para medir o impacto das suas ações</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 lg:py-24 bg-gradient-to-br from-orange-500 to-orange-600 relative overflow-hidden">
+  <div class="absolute inset-0">
+    <div class="absolute top-10 left-10 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-10 right-10 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
+  </div>
+
+  <div class="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl lg:text-4xl font-bold font-lexend text-white mb-6">
+      Pronto para revolucionar seus brindes corporativos?
+    </h2>
+    <p class="text-lg text-orange-100 mb-8 leading-relaxed">
+      Acesse nossa plataforma e descubra como é fácil gerenciar presentes para sua equipe
+    </p>
+
+    <div class="space-y-4">
+      <%= link_to "Entrar na Plataforma", new_user_session_path,
+          class: "bg-white text-orange-600 hover:bg-gray-50 font-lexend font-bold px-8 py-3 rounded-full text-lg inline-block transform hover:-translate-y-1 hover:shadow-2xl transition-all duration-300" %>
+
+      <p class="text-sm text-orange-100 mt-4">
+        Ainda não tem acesso? Entre em contato conosco para conhecer nossos planos
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="contato" class="bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 lg:gap-12 mb-12">
+      <div class="col-span-2">
+        <%= image_tag "beuni_logo.png", alt: "Beuni", class: "h-8 w-auto max-w-[120px] mb-6 filter brightness-0 invert" %>
+        <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+          Empresa líder em fornecimento de brindes personalizados.<br>
+          Criamos seus produtos, armazenamos e agendamos o envio.<br>
+          <span class="font-bold text-white">Você só precisa fazer o seu pedido na plataforma.</span>
+        </p>
+        <div class="flex space-x-3 sm:space-x-4">
+          <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300 cursor-pointer">
+            <span class="text-lg">📘</span>
+          </div>
+          <div class="w-10 h-10 bg-gradient-to-br from-pink-500 to-pink-700 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300 cursor-pointer">
+            <span class="text-lg">📸</span>
+          </div>
+          <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300 cursor-pointer">
+            <span class="text-lg">💼</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="font-lexend text-xl font-semibold mb-6">Navegação</h4>
+        <ul class="space-y-3">
+          <li><a href="#inicio" class="text-gray-300 hover:text-white transition-colors duration-300 hover:translate-x-2 inline-block">Início</a></li>
+          <li><a href="#servicos" class="text-gray-300 hover:text-white transition-colors duration-300 hover:translate-x-2 inline-block">Serviços</a></li>
+          <li><a href="#plataforma" class="text-gray-300 hover:text-white transition-colors duration-300 hover:translate-x-2 inline-block">Plataforma</a></li>
+          <li><%= link_to "Entrar", new_user_session_path,
+                  class: "text-gray-300 hover:text-white transition-colors duration-300 hover:translate-x-2 inline-block" %></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-lexend text-xl font-semibold mb-6">Contato</h4>
+        <ul class="space-y-4">
+          <li class="flex items-center space-x-3">
+            <span class="text-lg">📧</span>
+            <span class="text-gray-300">contato@beuni.com.br</span>
+          </li>
+          <li class="flex items-center space-x-3">
+            <span class="text-lg">📱</span>
+            <span class="text-gray-300">WhatsApp</span>
+          </li>
+          <li class="flex items-center space-x-3">
+            <span class="text-lg">🌐</span>
+            <span class="text-gray-300">beuni.com.br</span>
+          </li>
+          <li class="flex items-center space-x-3">
+            <span class="text-lg">📍</span>
+            <span class="text-gray-300">São Paulo, Brasil</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-700 pt-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <p class="text-sm text-gray-400 mb-4 md:mb-0">
+          © 2024 BeUni - Todos os direitos reservados | Desenvolvido com ❤️ para revolucionar brindes corporativos
+        </p>
+        <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-6 text-sm text-gray-400">
+          <a href="#" class="hover:text-white transition-colors duration-300">Política de Privacidade</a>
+          <a href="#" class="hover:text-white transition-colors duration-300">Termos de Uso</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

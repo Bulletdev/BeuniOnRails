@@ -1,45 +1,228 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
   <head>
     <title>Beuni Gifts</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Gantari:wght@300;400;500;600&display=swap" rel="stylesheet">
+
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+
+    <style>
+      :root {
+        --beuni-cream: #F8F1E0;
+        --beuni-orange: #FFB990;
+        --beuni-green: #93C90F;
+        --beuni-brown: #331B10;
+        --beuni-orange-border: #FF5600;
+        --beuni-text: #2D2926;
+        --beuni-white: #FFFFFF;
+      }
+
+      body {
+        font-family: 'Gantari', sans-serif;
+        background-color: var(--beuni-cream);
+      }
+
+      .font-lexend {
+        font-family: 'Lexend', sans-serif;
+      }
+
+      .beuni-card {
+        background: var(--beuni-white);
+        border-radius: 14px;
+        border: 1px solid var(--beuni-orange-border);
+        transition: all 300ms ease;
+      }
+
+      .beuni-card:hover {
+        transform: translateX(5px);
+      }
+
+      .beuni-service-card {
+        border-radius: 14px;
+        padding: 6%;
+        transition: all 300ms ease;
+        min-height: 11vh;
+        display: flex;
+        justify-content: center;
+        gap: 3px 0px;
+      }
+
+      .beuni-service-card:hover {
+        transform: translateX(5px);
+      }
+
+      .beuni-orange-card {
+        background-color: var(--beuni-orange);
+        color: var(--beuni-text);
+      }
+
+      .beuni-green-card {
+        background-color: var(--beuni-green);
+        color: var(--beuni-white);
+      }
+
+      .beuni-brown-card {
+        background-color: var(--beuni-brown);
+        color: var(--beuni-white);
+      }
+
+      /* Additional Beuni service card styles from website */
+      .beuni-service-card {
+        border-radius: 14px;
+        padding: 6%;
+        transition: all 300ms ease;
+        min-height: 11vh;
+        display: flex;
+        justify-content: center;
+        gap: 3px 0px;
+        flex-direction: column;
+      }
+
+      .beuni-service-card:hover {
+        transform: translateX(5px);
+      }
+
+      .beuni-orange-card {
+        background-color: var(--beuni-orange);
+        color: var(--beuni-text);
+      }
+
+      .beuni-green-card {
+        background-color: var(--beuni-green);
+        color: var(--beuni-white);
+      }
+
+      .beuni-brown-card {
+        background-color: var(--beuni-brown);
+        color: var(--beuni-white);
+      }
+
+      /* Hero banner style */
+      .beuni-banner {
+        background-color: var(--beuni-orange);
+        color: var(--beuni-text);
+        text-align: center;
+        padding: 12px 16px;
+        font-weight: 600;
+        font-family: 'Lexend', sans-serif;
+        border-bottom: 1px solid var(--beuni-orange-border);
+      }
+
+      .beuni-banner:hover {
+        background-color: var(--beuni-orange-border);
+        color: var(--beuni-white);
+        text-decoration: none;
+      }
+
+      /* Enhanced navigation styles */
+      .beuni-nav-link {
+        font-family: 'Lexend', sans-serif;
+        border-transparent: transparent;
+        transition: all 300ms ease;
+        color: var(--beuni-text);
+        text-decoration: none;
+      }
+
+      .beuni-nav-link:hover {
+        border-bottom-color: var(--beuni-orange);
+        color: var(--beuni-orange-border);
+        transform: translateY(-1px);
+      }
+
+      /* Status badges */
+      .beuni-status-badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 500;
+        font-family: 'Lexend', sans-serif;
+        transition: all 200ms ease;
+      }
+
+      .beuni-status-scheduled {
+        background-color: var(--beuni-orange);
+        color: var(--beuni-white);
+      }
+
+      .beuni-status-processing {
+        background-color: var(--beuni-orange-border);
+        color: var(--beuni-white);
+      }
+
+      .beuni-status-success {
+        background-color: var(--beuni-green);
+        color: var(--beuni-white);
+      }
+
+      .beuni-status-failed {
+        background-color: var(--beuni-brown);
+        color: var(--beuni-white);
+      }
+
+      /* Smooth scrolling para âncoras */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Animações adicionais */
+      .beuni-fade-in {
+        animation: fadeIn 0.8s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    </style>
   </head>
 
-  <body class="bg-gray-50" style="background-color: #F9FAFB;">
+  <body style="background-color: #F8F1E0;">
     <% if user_signed_in? && !devise_controller? %>
-      <nav class="bg-white shadow-beuni border-b border-gray-100">
+      <!-- Promotional Banner -->
+      <div class="beuni-banner">
+        🎁 Sistema de Gestão de Presentes Beuni - Gerencie campanhas e envios! 🎁
+      </div>
+
+      <nav style="background-color: var(--beuni-white); border-bottom: 1px solid var(--beuni-orange-border);" class="shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex justify-between h-16">
             <div class="flex">
               <div class="flex-shrink-0 flex items-center">
-                <%= link_to root_path, class: "text-xl font-bold" do %>
-                  <span style="color: #6B46C1;">Beuni</span> <span style="color: #EC4899;">Gifts</span>
+                <%= link_to dashboard_path, class: "font-lexend text-xl font-bold" do %>
+                  <span style="color: var(--beuni-orange-border);">Beuni</span>
+                  <span style="color: var(--beuni-green);">Gifts</span>
                 <% end %>
               </div>
               <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
-                <%= link_to "Dashboard", root_path,
-                    class: "border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium" %>
+                <%= link_to "Dashboard", dashboard_path,
+                    class: "beuni-nav-link inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium",
+                    style: "border-color: var(--beuni-orange-border);" %>
                 <%= link_to "Funcionários", "#",
-                    class: "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium" %>
+                    class: "beuni-nav-link border-transparent inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium" %>
                 <%= link_to "Campanhas", "#",
-                    class: "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium" %>
+                    class: "beuni-nav-link border-transparent inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium" %>
                 <%= link_to "Envios", "#",
-                    class: "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium" %>
+                    class: "beuni-nav-link border-transparent inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium" %>
               </div>
             </div>
             <div class="hidden sm:ml-6 sm:flex sm:items-center">
               <div class="ml-3 relative">
                 <div class="flex items-center space-x-4">
-                  <span class="text-sm text-gray-700">Olá, <%= current_user.name %></span>
-                  <span class="text-xs text-gray-500">(<%= current_organization.name %>)</span>
-                  <%= link_to "Sair", destroy_user_session_path, method: :delete,
-                              class: "text-sm px-4 py-2 rounded-full transition-all duration-200 hover:transform hover:-translate-y-0.5",
-                              style: "background-color: #6B46C1; color: white;" %>
+                  <span class="text-sm font-lexend" style="color: var(--beuni-text);">Olá, <%= current_user.name %></span>
+                  <span class="text-xs" style="color: var(--beuni-text); opacity: 0.7;">(<%= current_organization.name %>)</span>
+                  <%= link_to "Sair", destroy_user_session_path,
+                              data: { turbo_method: :delete, turbo_confirm: "Tem certeza que deseja sair?" },
+                              class: "font-lexend text-sm px-4 py-2 rounded-full transition-all duration-200 hover:transform hover:-translate-y-0.5",
+                              style: "background-color: var(--beuni-brown); color: var(--beuni-white);" %>
                 </div>
               </div>
             </div>
@@ -50,13 +233,15 @@
 
     <main>
       <% if notice %>
-        <div class="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded relative mb-4 mx-4 mt-4">
+        <div class="font-gantari px-4 py-3 rounded-lg relative mb-4 mx-4 mt-4 border transition-all duration-200"
+             style="background-color: var(--beuni-green); color: var(--beuni-white); border-color: var(--beuni-green); opacity: 0.9;">
           <%= notice %>
         </div>
       <% end %>
 
       <% if alert %>
-        <div class="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded relative mb-4 mx-4 mt-4">
+        <div class="font-gantari px-4 py-3 rounded-lg relative mb-4 mx-4 mt-4 border transition-all duration-200"
+             style="background-color: var(--beuni-orange-border); color: var(--beuni-white); border-color: var(--beuni-orange-border); opacity: 0.9;">
           <%= alert %>
         </div>
       <% end %>
