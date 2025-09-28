@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Estilos adicionais do site BeUni */
+.beuni-gradient-text {
+  background: linear-gradient(90deg, #FF5600 0%, #FFB990 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.beuni-btn-primary {
+  background: linear-gradient(90deg, #FF5600 0%, #FFB990 100%);
+  transition: all 0.3s ease;
+}
+
+.beuni-btn-primary:hover {
+  background: linear-gradient(90deg, #FF5600 0%, #FF8C4D 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(255, 86, 0, 0.1), 0 4px 6px -2px rgba(255, 86, 0, 0.05);
+}
+
+.beuni-text-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
